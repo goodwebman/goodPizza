@@ -7,3 +7,4 @@ export { ProductGroupList } from "./products-group-list"
 export { SortPopup } from './sort-popup'
 export { Title } from './title'
 export { TopBar } from './top-bar'
+export { SearchInput } from './search-input'
