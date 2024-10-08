@@ -1,10 +1,16 @@
 export { Categories } from './categories'
+export { ChoosePizzaForm } from './choose-pizza-form'
+export { ChooseProductForm } from './choose-product-form'
 export { Container } from './container'
 export { FilterCheckbox } from './filter-checkbox'
 export { Filters } from './filters'
+export { GroupVariants } from './groupVariants'
 export { Header } from './header'
-export { ProductGroupList } from "./products-group-list"
+export { PizzaImage } from './PizzaImage'
+export { ProductGroupList } from './products-group-list'
+export { SearchInput } from './search-input'
 export { SortPopup } from './sort-popup'
 export { Title } from './title'
 export { TopBar } from './top-bar'
-export { SearchInput } from './search-input'
+
+export * from './modals'
