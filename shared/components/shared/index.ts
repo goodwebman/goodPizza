@@ -13,5 +13,7 @@ export { SortPopup } from './sort-popup'
 export { Title } from './title'
 export { TopBar } from './top-bar'
 export { IngredientItem } from './ingredient-item'
+export { CartButton } from './cart-button'
+export { CartDrawer } from './cart-drawer'
 
 export * from './modals'
