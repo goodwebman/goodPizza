@@ -9,6 +9,7 @@ import { IProduct } from '@/@types/prisma'
 import { useRouter } from 'next/navigation'
 import { ChoosePizzaForm } from '../choose-pizza-form'
 import { ChooseProductForm } from '../choose-product-form'
+import { useCartStore } from '@/shared/store'
 
 interface Props {
 	className?: string
@@ -17,7 +18,22 @@ interface Props {
 
 export const ChooseProductModal: React.FC<Props> = ({ className, product }) => {
 	const router = useRouter()
+	const firstItem = product.items[0]
 	const isPizzaForm = Boolean(product.items[0].pizzaType)
+	const addCartItem = useCartStore(state => state.addCartItem)
+
+	const onAddProduct = () => {
+		addCartItem({
+			productItemId: firstItem.id
+		})
+	}
+
+	const onAddPizza = (productItemId: number, ingredients: number[]) => {
+		addCartItem({
+			productItemId,
+			ingredients,
+		})
+    }
 
 	return (
 		<Dialog open={Boolean(product)} onOpenChange={() => router.back()}>
