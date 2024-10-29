@@ -1,4 +1,5 @@
 import { Nunito } from 'next/font/google'
+import { Toaster } from 'react-hot-toast';
 
 import './globals.css'
 
@@ -17,6 +18,7 @@ export default function GodLayout({
 		<html lang='en'>
 			<body className={`${nunito.variable} antialiased`}>
 				{children} {/* children - это страницы */}
+				<Toaster /> {/* Toaster - для вывода уведомлений */}
 			</body>
 		</html>
 	)
